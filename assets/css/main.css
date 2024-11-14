@@ -259,6 +259,76 @@ ul {
   transform: scale(1.05);
 }
 
+
+/* Base button style */
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: white;
+  border-radius: 40px;
+  display: inline-block;
+  white-space: nowrap;
+  background-color: var(--skin-color);
+  transition: all 0.3s ease;
+  border: none;
+  /* Ensures the button does not overflow the container */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Button hover effect */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile-specific button adjustments */
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 14px;
+    /* Smaller font size */
+    padding: 10px 25px;
+    /* Smaller padding */
+    width: 100%;
+    /* Ensure buttons fill the available space */
+  }
+}
+
+/* For very small screens (e.g., 480px and below) */
+@media screen and (max-width: 480px) {
+  .btn {
+    font-size: 12px;
+    /* Further reduce the font size */
+    padding: 8px 20px;
+    /* Further reduce padding */
+    width: 100%;
+    /* Ensure the button takes up the full width */
+  }
+}
+
+/* Ensure buttons in contact info items do not overflow */
+.contact-info-item .btn {
+  width: 100%;
+  /* Ensure button inside contact info item is responsive */
+}
+
+/* Optional: Align buttons horizontally with a margin on mobile */
+@media screen and (max-width: 768px) {
+  .contact-info-item {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center align the button */
+  }
+
+  .contact-info-item .btn {
+    margin-top: 10px;
+    /* Add space between button and content */
+    width: 100%;
+  }
+}
+
 .shadow-dark {
   box-shadow: 0 0 20px rgb(48, 46, 77, 0.15);
 }
